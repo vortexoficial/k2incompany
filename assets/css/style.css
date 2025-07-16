@@ -31,6 +31,66 @@ Tags: bootstrap,conference,meetup, program, event, event schedule, arrangment, e
 
 >>> TABLE OF CONTENTS END:
 @@@@@@@@@@@@@@@@@@@@@@ */
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonials h3 {
+  font-size: 28px;
+  color: #183b56;
+  margin-bottom: 40px;
+}
+
+.comment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas no desktop */
+  gap: 10px; /* Menor distância entre os comentários */
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.comment-item img {
+  width: 100%;
+  max-width: 480px; /* Imagens com 480px no desktop */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Centralizando o vídeo */
+.video-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.video-section video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .comment-grid {
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+  }
+
+  .comment-item img {
+    max-width: 90%; /* Ajuste no tamanho das imagens no mobile */
+  }
+
+  .testimonials h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials h3 {
+    font-size: 20px;
+  }
+}
+
 @font-face {
   font-family: "Circular Std";
   src: local("Circular Std Black"), local("CircularStd-Black"), url("../custom-fonts/CircularStd-Black.woff2") format("woff2");
@@ -5680,3 +5740,4 @@ html {
   font-weight: 600;  /* mais grossa */
   text-align: left;
 }
+
